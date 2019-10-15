@@ -12,4 +12,5 @@ RUN echo 'Yo, in container' > /var/www/html/index.html
 EXPOSE 80
 
 # default command when starting container
+# see ENTRYPOINT [ "executable" ]
 CMD ["nginx", "-g", "daemon off;"]
