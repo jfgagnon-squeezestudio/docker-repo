@@ -10,3 +10,6 @@ RUN apt-get install -y curl
 RUN echo 'Yo, in container' > /var/www/html/index.html
 
 EXPOSE 80
+
+# default command when starting container
+CMD ["nginx", "-g", "daemon off;"]
