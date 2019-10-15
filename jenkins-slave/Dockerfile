@@ -6,6 +6,7 @@ LABEL maintainer="jfgagnon@squeezestudio.com"
 
 RUN apt-get update
 RUN apt-get install -y nginx
+RUN apt-get install -y curl
 RUN echo 'Yo, in container' > /var/www/html/index.html
 
 EXPOSE 80
