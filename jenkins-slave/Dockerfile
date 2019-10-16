@@ -1,8 +1,6 @@
-# Version: 0.0.1
-
 FROM ubuntu:18.04
 
-LABEL maintainer="jfgagnon@squeezestudio.com"
+LABEL maintainer="jfgagnon@squeezestudio.com" version="0.0.1"
 
 RUN apt-get update
 RUN apt-get install -y nginx
