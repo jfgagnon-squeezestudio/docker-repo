@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  docker-repo:
+    # restart: always
+    image: registry
+    ports:
+    - "5000:5000"
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /docker-repo-data
+      REGISTRY_HTTP_TLS_CERTIFICATE: /docker-repo-certs/domain.crt
+      REGISTRY_HTTP_TLS_KEY: /docker-repo-certs/domain_unencrypted.key
+    volumes:
+      - /docker-repo-data:/docker-repo-data
+      - /docker-repo-certs:/docker-repo-certs
